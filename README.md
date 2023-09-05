@@ -34,23 +34,23 @@ Actility powers [Stadshuben](https://kalmarenergi.se/kalmarstadshubb/) which is 
 To add a device, you need to have the `DEVEUI`, `APPEUI`, and `APPKEY` of the LoRaWAN device that you want to onboard. These keys are usually on a label inside the sensor box. 
 
 To create a new `device` / `Node`, click on `Create`. Fill in the required field and select `ThingPark - KalmarEnergi` as your `Connector`. 
-![Alt text](image.png)
+![Alt text](images/image.png)
 
 Then, select the `Brand` and `Model` of your LoRaWAN device.
 
-![Alt text](image-1.png)
+![Alt text](images/image-1.png)
 
 Next, enter the `DEVEUI`, `APPEUI`, and `APPKEY` of the device and leave the `Activation Type` on `OTAA` and the `Device Class` on `Class A`. 
 
-![Alt text](image-2.png)
+![Alt text](images/image-2.png)
 
 Finally, review your device information and `Create`. 
 
-![Alt text](image-3.png)
+![Alt text](images/image-3.png)
 
 The newly created device should now be found under `Nodes`. 
 
-![Alt text](image-4.png)
+![Alt text](images/image-4.png)
 
 Once the sensor has been sending data for some time, the dashboard will look something like the following. 
 
