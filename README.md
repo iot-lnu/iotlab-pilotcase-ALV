@@ -5,6 +5,7 @@ The purpose of the project is to connect the cabins in Astrid Lindgrens Värld b
 * [Architecture &amp; Platform](#architecture--platform)
 * [Actility](#actility)
    * [Portal](#portal)
+      * [Add a device](#add-a-device)
    * [API](#api)
       * [Device API](#device-api)
       * [Device Data API](#device-data-api)
@@ -28,6 +29,31 @@ Actility powers [Stadshuben](https://kalmarenergi.se/kalmarstadshubb/) which is 
 
 
 ## Portal
+
+### Add a device 
+To add a device, you need to have the `DEVEUI`, `APPEUI`, and `APPKEY` of the LoRaWAN device that you want to onboard. These keys are usually on a label inside the sensor box. 
+
+To create a new `device` / `Node`, click on `Create`. Fill in the required field and select `ThingPark - KalmarEnergi` as your `Connector`. 
+![Alt text](image.png)
+
+Then, select the `Brand` and `Model` of your LoRaWAN device.
+
+![Alt text](image-1.png)
+
+Next, enter the `DEVEUI`, `APPEUI`, and `APPKEY` of the device and leave the `Activation Type` on `OTAA` and the `Device Class` on `Class A`. 
+
+![Alt text](image-2.png)
+
+Finally, review your device information and `Create`. 
+
+![Alt text](image-3.png)
+
+The newly created device should now be found under `Nodes`. 
+
+![Alt text](image-4.png)
+
+Once the sensor has been sending data for some time, the dashboard will look something like the following. 
+
 ![](https://hackmd.io/_uploads/rJgNpSGAh.png)
 
 It is possible to filter out sensors that are outside a set range on optional channels that the sensors send. The latest sensor value is then also displayed in the map view, as shown in the image below.
@@ -66,9 +92,9 @@ When it comes to authentication via HTTPS Request, you must call the following e
 
 - Username: "xxxx"
 - Password: "yyyy"           
--	responseType: "token id_token"            
--	scope: "openid offline_access https://kalmarenergib2c.onmicrosoft.com/6b6a459a-2596-4213-b42b-153f1e0a9af7/Device.Read.Add"
--	grantType: "password"
+-  responseType: "token id_token"            
+-  scope: "openid offline_access https://kalmarenergib2c.onmicrosoft.com/6b6a459a-2596-4213-b42b-153f1e0a9af7/Device.Read.Add"
+-  grantType: "password"
 
 See the image below for an example of how to fetch your token: 
 
@@ -86,8 +112,8 @@ To refresh the token itself:
 POST:  /v1/resource-owner/token 
 
 The payload should be like this:
--	refreshToken: "xxxx"
--	grantType: "refresh_token"
+-  refreshToken: "xxxx"
+-  grantType: "refresh_token"
 
 
 
@@ -107,7 +133,7 @@ GET https://api.kalmarenergi.se/device/v1/nodes/{NodeId}
  
  
 ### Device Data API
--	To fetch data from a node:
+-  To fetch data from a node:
 GET https://api.kalmarenergi.se/device-data/v1/message-values?nodeId={NodeId}6&pageIndex=1&pageSize=-1&sortBy=Message.CreatedAt&sortDescending=false&channelIds={ChannelId}&channelIds={ChannelId}&channelIds={ChannelId} 
 GET https://api.kalmarenergi.se/device-data/v1/message-values?NodeId={NodeId}
 GET https://api.kalmarenergi.se/device-data/v1/message-values?ChannelIds={ChannelId}&NodeId={NodeId} 
@@ -115,7 +141,7 @@ GET https://api.kalmarenergi.se/device-data/v1/message-values?ChannelIds={Channe
  
  
 ### Device Data Latest API
--	To retrieve only the most recent message (data) that arrived from a node:
+-  To retrieve only the most recent message (data) that arrived from a node:
 GET https://api.kalmarenergi.se/device-data-latest/v1/message-values?nodes={NodeId}&pageIndex=1&pageSize=100
  
  
