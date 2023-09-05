@@ -1,7 +1,18 @@
 # Astrid Lindgrens Värld 
 The purpose of the project is to connect the cabins in Astrid Lindgrens Värld by connecting sensors for temperature and humidity in the cabins. One of the objectives is to build a visual presentation of data from the cabins, so that the reception can observe if, for example, ventilation is required in a cabin or if the temperature is too high/low.
 
-[toc]
+* [Astrid Lindgrens Värld](#astrid-lindgrens-värld)
+* [Architecture &amp; Platform](#architecture--platform)
+* [Sensors](#sensors)
+   * [Downlink](#downlink)
+      * [How to make your own downlink](#how-to-make-your-own-downlink)
+      * [How to send downlinks](#how-to-send-downlinks)
+      * [Battery](#battery)
+* [Portal](#portal)
+* [API](#api)
+   * [Device API](#device-api)
+   * [Device Data API](#device-data-api)
+   * [Device Data Latest API](#device-data-latest-api)
 
 # Architecture & Platform 
 
@@ -12,12 +23,16 @@ The purpose of the project is to connect the cabins in Astrid Lindgrens Värld b
 
 x20 [ERS2 Lite](https://www.elsys.se/shop/product/ers-lite-v2-0/?v=f003c44deab6)
 Manual : [ERS2_Lite_manual](https://www.elsys.se/public/manuals/Operating%20Manual%20ERS.pdf)
+
 ![](https://hackmd.io/_uploads/Sk7A7YR6n.png)
 
 
 x1 [People counter](https://imbuildings.com/products/people-counter-lorawan/)
+
 Manual : [people_counter_manual](https://f.hubspotusercontent20.net/hubfs/4124978/LoRaWAN-People-Counter-Manual-v1.1-latest%20(1).pdf)
+
 Advanced guide : [people_counter_manual_advanced](https://connectedthings.store/sk/index.php?controller=attachment&id_attachment=177)
+
 ![](https://hackmd.io/_uploads/rJaLEtRTh.png)
 
 
