@@ -134,8 +134,11 @@ GET https://api.kalmarenergi.se/device/v1/nodes/{NodeId}
  
 ### Device Data API
 -  To fetch data from a node:
-GET https://api.kalmarenergi.se/device-data/v1/message-values?nodeId={NodeId}6&pageIndex=1&pageSize=-1&sortBy=Message.CreatedAt&sortDescending=false&channelIds={ChannelId}&channelIds={ChannelId}&channelIds={ChannelId} 
+
+GET https://api.kalmarenergi.se/device-data/v1/message-values?nodeId={NodeId}6&pageIndex=1&pageSize=-1&sortBy=Message.CreatedAt&sortDescending=false&channelIds={ChannelId}&channelIds={ChannelId}&channelIds={ChannelId}
+
 GET https://api.kalmarenergi.se/device-data/v1/message-values?NodeId={NodeId}
+
 GET https://api.kalmarenergi.se/device-data/v1/message-values?ChannelIds={ChannelId}&NodeId={NodeId} 
  
  
